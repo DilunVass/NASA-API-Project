@@ -7,6 +7,7 @@ import Typogrphy from './Typogrphy';
 import axios from "axios";
 import { Link } from 'react-router-dom';
 import { Nav } from 'react-bootstrap';
+import { HashLink } from 'react-router-hash-link';
 
 
 const ImageBackdrop = styled('div')(({ theme }) => ({
@@ -76,36 +77,6 @@ const images = [
     width: '40%',
     herf: '/marsroverphotos'
   },
-  // {
-  //   url: 'https://images.unsplash.com/photo-1453747063559-36695c8771bd?auto=format&fit=crop&w=400',
-  //   title: 'Tour',
-  //   width: '38%',
-  // },
-  // {
-  //   url: 'https://images.unsplash.com/photo-1523309996740-d5315f9cc28b?auto=format&fit=crop&w=400',
-  //   title: 'Gastronomy',
-  //   width: '38%',
-  // },
-  // {
-  //   url: 'https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=400',
-  //   title: 'Shopping',
-  //   width: '24%',
-  // },
-  // {
-  //   url: 'https://images.unsplash.com/photo-1506941433945-99a2aa4bd50a?auto=format&fit=crop&w=400',
-  //   title: 'Walking',
-  //   width: '40%',
-  // },
-  // {
-  //   url: 'https://images.unsplash.com/photo-1533727937480-da3a97967e95?auto=format&fit=crop&w=400',
-  //   title: 'Fitness',
-  //   width: '20%',
-  // },
-  // {
-  //   url: 'https://images.unsplash.com/photo-1518136247453-74e7b5265980?auto=format&fit=crop&w=400',
-  //   title: 'Reading',
-  //   width: '40%',
-  // },
 ];
 
 export default function ProductCategories() {
@@ -130,7 +101,7 @@ export default function ProductCategories() {
   return (
     <Container component="section" sx={{ mt: 8, mb: 4 }}>
       <Typogrphy variant="h4" marked="center" align="center" component="h2">
-        For all tastes and all desires
+        Discover the world of NASA
       </Typogrphy>
       <Box sx={{ mt: 8, display: 'flex', flexWrap: 'wrap' }}>
         
@@ -174,7 +145,7 @@ export default function ProductCategories() {
                 color="inherit"
                 className="imageTitle"
               >
-                <Nav.Link href={image.herf} >{image.title}</Nav.Link>
+                <HashLink to={image.herf} style={{color:"white", textDecoration:"none"}} >{image.title}</HashLink>
                   
                   <div className="imageMarked" />
                 
