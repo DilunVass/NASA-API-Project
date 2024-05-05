@@ -32,7 +32,7 @@ export const NavBar = () => {
         
             <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
                 <Container>
-                <Navbar.Brand href="/home">
+                <Navbar.Brand href="/">
                     <img src={logo} alt="Logo" />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -40,9 +40,9 @@ export const NavBar = () => {
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
-                    <Nav.Link href="/marsroverphotos" className={activeLink === 'Mars Rover Photos' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('marsroverphotos')}>Mars Rover Photos</Nav.Link>
-                    <Nav.Link href="/astroids" className={activeLink === 'Astroids' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('Astroids')}>Astroids</Nav.Link>
-                    <Nav.Link href="/picofday" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('Picture of the Day')}>Picture of the Day</Nav.Link>
+                    <HashLink style={{color:"white", textDecoration:"none", marginRight:"20px"}} to='/marsroverphotos' className={activeLink === 'Mars Rover Photos' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('marsroverphotos')}>Mars Rover Photos</HashLink>
+                    <HashLink style={{color:"white", textDecoration:"none",marginRight:"20px"}}  to="/astroids" className={activeLink === 'Astroids' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('Astroids')}>Astroids</HashLink>
+                    <HashLink style={{color:"white", textDecoration:"none",marginRight:"20px"}}  to="/picofday" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('Picture of the Day')}>Picture of the Day</HashLink>
                     </Nav>
                     <span className="navbar-text">
                     <div className="social-icon">

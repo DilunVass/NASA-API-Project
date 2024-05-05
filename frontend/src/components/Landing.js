@@ -4,6 +4,7 @@ import headerImg from "../assets/img/solarSystem.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { HashLink } from "react-router-hash-link";
 
 
 
@@ -63,9 +64,9 @@ export default function Landing() {
                   <p>Welcome to "Exploring Our Solar System," your online guide to the wonders of our cosmic neighborhood! Here, you'll embark on a journey through the celestial marvels that make up our solar system. From the blazing radiance of the Sun to the distant realms of icy comets, join us as we uncover the mysteries and beauty of space.</p>
                   
                   <button onClick={() => console.log('connect')} style={{ border: 'none', background: 'none' }}>
-                    <a href="/discover" style={{ color: "white", textDecoration: "none" }}>
+                    <HashLink to="/discover" style={{ color: "white", textDecoration: "none" }}>
                       Let’s Discover <ArrowRightCircle size={25} />
-                    </a>
+                    </HashLink>
                   </button>
 
               </div>}

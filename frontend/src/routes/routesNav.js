@@ -11,7 +11,7 @@ export default function RoutesNav() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path='/home' element={<Home/>}/>
+      <Route path='/' element={<Home/>}/>
       <Route path='/signin' element={<SignIn/>}/>
       <Route path='/discover' element={<Discover/>}/>
       <Route path='/picofday' element={<PicOfDay/>}/>
