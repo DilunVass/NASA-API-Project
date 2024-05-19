@@ -1,7 +1,4 @@
 # NASA-API-Project
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/V1F4A3D5)
-
-![image](https://github.com/sliitcsse/se3040-assignment02-DilunVass/assets/100837990/904fff39-3885-45cf-95b0-b3e008b02187)
 
 This is the url of deployed website - https://effulgent-belekoy-7ca97b.netlify.app/
 
