@@ -88,15 +88,12 @@ function Typography(props) {
 }
 
 Typography.propTypes = {
-  /**
-   * The content of the component.
-   */
+
   children: PropTypes.node,
   marked: PropTypes.oneOf(['center', 'left', 'none']),
-  /**
-   * Applies the theme typography styles.
-   * @default 'body1'
-   */
+  
+    // @default 'body1'
+   
   variant: PropTypes.oneOf([
     'body1',
     'body2',
