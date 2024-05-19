@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {auth,provider} from "../config";
 import {signInWithPopup} from "firebase/auth";
-import Home from "./Home";
 import { Link } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import { Container } from "@mui/material";
@@ -13,7 +12,7 @@ export default function SignIn() {
         signInWithPopup(auth,provider).then((data)=>{
             setValue(data.user.email)
             localStorage.setItem("email",data.user.email)
-            window.location.href = "/home"
+            window.location.href = "/"
         })
     }
 
@@ -22,13 +21,6 @@ export default function SignIn() {
     })
     return (
         
-    //     <div className="auth-form-container">
-    //         <h2>Signin</h2>
-
-    //     {
-    //     <button onClick={handleClick}>Signin With Google</button>
-    //     }
-    // </div>
     <>
     <NavBar/>
     <Container style={{width:"700px", height:"1000px", marginTop:"300px"}}>

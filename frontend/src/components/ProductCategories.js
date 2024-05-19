@@ -5,8 +5,6 @@ import Container from '@mui/material/Container';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typogrphy from './Typogrphy';
 import axios from "axios";
-import { Link } from 'react-router-dom';
-import { Nav } from 'react-bootstrap';
 import { HashLink } from 'react-router-hash-link';
 
 

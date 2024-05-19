@@ -1,13 +1,8 @@
-
 import React, { useEffect, useState } from "react";
-import headerImg from "../assets/img/banner-bg2.png";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/free-mode";
 import axios from "axios";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function Topic(){
-
+export default function Topic() {
     const [data, setData] = useState(null);
     const [showFullExplanation, setShowFullExplanation] = useState(false);
 
@@ -29,16 +24,28 @@ export default function Topic(){
     };
 
     return (
-        <>
-        <div  style={{backgroundColor:""}}>
+        <div style={{ backgroundColor: "" }}>
             <div className="container">
                 <div className="row justify-content-center">
-                    <div className="col-md-8">
+                    <div className="col-md-10 col-lg-8">
                         {data ? (
                             <>
                                 <h1 className="my-3 text-center">Astronomy Picture of the Day</h1>
                                 <div className="card my-2">
-                                    <img src={`${data.url}`} className="card-img-top" alt="Server error" style={{ maxWidth: "100%", height: "auto" }}/>
+                                    {data.media_type === "image" ? (
+                                        <img src={data.url} className="card-img-top" alt="Astronomy" style={{ maxWidth: "100%", height: "auto" }} />
+                                    ) : (
+                                        <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden", maxWidth: "100%", background: "#000" }}>
+                                            <iframe
+                                                title="space-video"
+                                                src={data.url}
+                                                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+                                                frameBorder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen
+                                            />
+                                        </div>
+                                    )}
                                     <div className="card-body">
                                         <h5 className="card-title">{data.title}</h5>
                                         {showFullExplanation ? (
@@ -59,6 +66,5 @@ export default function Topic(){
                 </div>
             </div>
         </div>
-        </>
     );
 }
