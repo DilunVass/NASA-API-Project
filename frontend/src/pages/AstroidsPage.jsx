@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import NavBar from "../components/NavBar";
 import Asteroids from "../components/Asteroids";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function AstroidsPage() {
     useEffect(() => {
@@ -9,15 +10,13 @@ export default function AstroidsPage() {
         document.body.style.backgroundPosition = "center";
         document.body.style.backgroundAttachment = "fixed";
     }, []);
+    
     return (
         <div>
-            
-            <NavBar/>
-            <div style={{marginTop:"100px"}}>
-                <Asteroids/>
+            <NavBar />
+            <div className="container" style={{ marginTop: "100px" }}>
+                <Asteroids />
             </div>
-            
-            
         </div>
     );
 }
